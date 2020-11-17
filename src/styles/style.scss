@@ -1,0 +1,174 @@
+@import './variables.scss';
+
+.button {
+  background-color: $accent-color;
+  height: 56px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.0001), 0px 4px 8px rgba(44, 39, 56, 0.08);
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+
+  span {
+    font-family: "IBM Plex Sans";
+    color: $background-color;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &:active {
+    border: 2px solid rgba(44, 39, 56, 0.86);
+  }
+
+  &:disabled {
+    background-color: $border-color;
+    cursor: default;
+
+    span {
+      color: #2C2738;
+      opacity: 24%;
+    }
+  }
+}
+
+.input {
+  background: #FFF;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+  height: 52px;
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  line-height: 21px;
+  color: #2C2738;
+  padding: 16px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $accent-color;
+  }
+
+  &::placeholder {
+    font-family: "IBM Plex Sans";
+    font-size: 16px;
+    line-height: 21px;
+    color: #7C9CBF;
+  }
+
+}
+
+.label {
+  font-family: "IBM Plex Sans";
+  color: #756F86;
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 7px;
+}
+
+.checkboxField {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: #FFF;
+    border: 2px solid #0880AE;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+  }
+}
+
+.checkbox {
+  visibility: hidden;
+  width: 0;
+
+  &:checked + .checkboxField__label {
+    background: url('../assets/icons/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.error {
+  font-family: "IBM Plex Sans";
+  color: #FF7171;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  top: 87px;
+  left: 0;
+}
+
+.form {
+  background: #FFF;
+  box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.02), 0px 32px 64px rgba(44, 39, 56, 0.04);
+  border-radius: 24px;
+  padding: 40px 30px;
+  width: 460px;
+
+  &__row {
+    margin-bottom: 34px;
+  }
+
+  &__header {
+    margin-bottom: 58px;
+  }
+
+  &__checkbox {
+    @extend .form__row;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__text {
+    order: 2;
+    font-family: "IBM Plex Sans";
+    font-size: 16px;
+    line-height: 21px;
+    color: #756F86;
+  }
+}
+
+.title {
+  color: #2C2738;
+  font-size: 34px;
+  line-height: 44.2px;
+  font-family: "IBM Plex Sans Medium";
+  margin-bottom: 8px;
+}
+
+.link {
+  color: $accent-color;
+  text-decoration: none;
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.layout {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #F1F1F1;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.text {
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  line-height: 22px;
+  color:#2C2738;
+}
